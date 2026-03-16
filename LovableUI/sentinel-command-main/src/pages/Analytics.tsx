@@ -4,7 +4,7 @@ import { apiFetch } from "@/lib/api";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend
 } from "recharts";
-import { useEffect, useMemo, useState } from "react";
+
 
 const RANGES = ["1H", "6H", "24H", "ALL"] as const;
 type Range = typeof RANGES[number];
@@ -47,7 +47,7 @@ export default function Analytics() {
       .then(d => {
         if (!isActive) return;
         const metrics = Array.isArray(d?.history) ? d.history : [];
-        setHistory(metrics.map(item => ({
+        setHistory(metrics.map((item: any) => ({
           bucket: item.timestamp ? new Date(item.timestamp).toLocaleTimeString("en-GB", { hour12: false }) : "",
           avg_vehicles: Number(item.vehicle_count || 0),
           avg_people: Number(item.people_count || 0),
