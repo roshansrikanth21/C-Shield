@@ -65,6 +65,14 @@ Thumbs.db
 snapshots/
 uploads/
 models/
+weights/
+*.pt
+
+# Temp / debug files
+test_up.py
+test_video.mp4
+routes.txt
 
 vast_project/
 .claude/
+.agent/
