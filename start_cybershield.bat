@@ -15,7 +15,7 @@ if "%VITE_API_URL%"=="" set "VITE_API_URL=http://localhost:8080"
 if "%VITE_WS_URL%"=="" set "VITE_WS_URL=ws://localhost:8080"
 
 set "ROOT=%~dp0"
-set "BACKEND_DIR=%ROOT%CyberShield-main\integrated-video-analytics"
+set "BACKEND_DIR=%ROOT%integrated-video-analytics"
 set "FRONTEND_DIR=%ROOT%LovableUI\sentinel-command-main"
 
 :: Check Backend
@@ -53,7 +53,6 @@ echo [1/2] Starting CyberShield Analytics Engine (FastAPI)...
 pushd "%BACKEND_DIR%"
 :: Check if venv exists and use it if it does
 if exist ".venv\Scripts\activate.bat" (
-    echo Using virtual environment...
     start "CyberShield Backend" cmd /k "call .venv\Scripts\activate.bat && set CYBERSHIELD_SECRET_KEY=%CYBERSHIELD_SECRET_KEY% && python main.py"
 ) else (
     start "CyberShield Backend" cmd /k "set CYBERSHIELD_SECRET_KEY=%CYBERSHIELD_SECRET_KEY% && python main.py"
