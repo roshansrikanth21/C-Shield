@@ -3,6 +3,7 @@ import { apiFetch } from "@/lib/api";
 import {
   PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend
 } from "recharts";
+import { useEffect, useState } from "react";
 
 interface SummaryData {
   camera_id: string;

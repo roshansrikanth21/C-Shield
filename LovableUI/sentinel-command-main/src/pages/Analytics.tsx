@@ -4,6 +4,7 @@ import { apiFetch } from "@/lib/api";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend
 } from "recharts";
+import { useEffect, useMemo, useState } from "react";
 
 const RANGES = ["1H", "6H", "24H", "ALL"] as const;
 type Range = typeof RANGES[number];

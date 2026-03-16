@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CyberShieldState } from "../pages/Index";
 import { apiFetch, apiUpload } from "../lib/api";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface ControlBarProps {
   cameras: string[];

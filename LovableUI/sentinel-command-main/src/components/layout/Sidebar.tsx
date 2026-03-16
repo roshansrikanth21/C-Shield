@@ -12,7 +12,7 @@ interface SidebarProps {
 const navItems: {
   id: ViewType;
   label: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number | string; className?: string }>;
   bottom?: boolean;
 }[] = [
   { id: "live",      label: "LIVE VIEW",  icon: Camera },

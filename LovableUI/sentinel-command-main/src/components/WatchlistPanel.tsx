@@ -94,8 +94,8 @@ export function WatchlistPanel({ eventLogs, onEnroll }: WatchlistPanelProps) {
       }
       const formData = new FormData();
       formData.append("name", safeName);
-      formData.append("image", enrollFile);
-      const data = await apiUpload(`/api/watchlist/enroll`, formData);
+      formData.append("file", enrollFile);
+      const data = await apiUpload(`/api/watchlist`, formData);
       if ((data as any)?.status === "success") {
         toast.success(`Subject ${safeName.toUpperCase()} enrolled.`);
         setEnrollOpen(false);

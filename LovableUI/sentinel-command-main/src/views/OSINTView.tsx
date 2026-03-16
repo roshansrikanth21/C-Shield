@@ -1,5 +1,7 @@
 import { Network } from "lucide-react";
 
+import { Network } from "lucide-react";
+
 export function OSINTView() {
   return (
     <div className="h-full flex items-center justify-center flex-col gap-3">

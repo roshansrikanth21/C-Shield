@@ -14,6 +14,7 @@ import { apiFetch } from "@/lib/api";
 import { useBackendStream } from "@/hooks/useBackendStream";
 import "@/prompt-c-additions.css";
 import Analytics from "@/pages/Analytics";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 // Re-export so existing imports work
 export interface CyberShieldState {
